@@ -1,0 +1,112 @@
+Resolução do excercícios propostos no Curso Mundo Python - Guanabara
+
+
+#ex1 - Dizer Olá
+
+print('olá, mundo!')
+
+-------------------------------------------
+
+#ex2 - Boas vindas
+
+nome = input('Qual é seu nome?')
+print(f'Seja bem vinda, {nome}!')
+
+-------------------------------------------
+
+#ex3 - Operação Soma
+
+n1 = int (input('digite um valor: '))
+n2 = int (input('digite outro: '))
+s = n1 + n2
+print('a soma entre {} e {} vale {}'.format(n1,n2,s))
+
+-------------------------------------------
+
+#ex4 - mostrar o tipo primitivo
+
+a = input('Digite algo: ')
+print('O tipo primitivo desse valor é:', type(a))
+print('só tem espaços?', a.isspace())
+print('é um número?', a.isnumeric())
+print('é alfanumérico?', a.isalnum())
+
+-------------------------------------------
+
+#ex5 Operações numéricas: Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor.
+
+
+n = int(input('digite um número'))
+a = int(n-1)
+su = int(n+1)
+print('O antecessor de {} é {} e o sucessor é {}'.format(n,a,su))
+
+resolução 2
+n = int(input('Digite um número: '))
+print('Analisando o valor {}, seu antecessor é {} e o sucessor é {}.' .format(n,(n-1), (n+1)))
+
+-------------------------------------------
+
+#ex6 Crie um algoritmo que leia um número e mostre o seu dobro, triplo e raiz quadrada.
+
+n = int(input('Diga um número:'))
+d = n*2
+t = n*3
+r = n ** (1/2)
+print('O número {} tem o dobro: {}, o triplo: {} e a raiz quadrada: {}'.format(n,d,t,r))
+
+#resolução2:
+n = int(input('Diga um número: '))
+print('O número {} tem o dobro: {}, o triplo: {} e a raiz quadrada: {:.2f}'.format(n,(n*2),(n*3),(n**(1/2))))
+
+-------------------------------------------
+
+#ex7 Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre sua média
+
+nome = input('Nome do Aluno: ')
+print('Olá,{},calcule sua média!'.format(nome))
+n1 = float(input('Digite a primeira nota: '))
+n2 = float(input('Digite a segunda nota: '))
+m = float((n1+n2)/2)
+print('{}, sua média é {}'.format(nome,m))
+
+-------------------------------------------
+
+#ex8  Escreva um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros
+
+m = float (input('Digite um valor em metros: '))
+print('O valor {}M, corresponde a {:.2f}KM, {:.2f}HM, {:.2f}DAM, {:.2f}DM, {:.2f}CM e {:.2f}MM'.format(m,(m/1000),(m/100),(m/10),(m*10), (m*100),(m*1000)))
+
+-------------------------------------------
+
+#ex9 Faça um programa que leia um número inteiro qualquer e mostre na tela a sua tabuada
+
+n = int(input('Número para tabuada: '))
+print('_'*12)
+print('A tabuada do {} é: {},{},{},{},{},{},{},{},{}'.format(n, (n*1), (n*2), (n*3), (n*4), (n*5), (n*6), (n*7), (n*8), (n*9)))
+print('_'*12)
+
+#resolução2
+
+n = int(input('Número para tabuada: '))
+print('_'*12)
+print('{} x {} = {}'.format(1,n,(1*n)))
+print('{} x {} = {}'.format(2,n,(2*n)))
+print('{} x {} = {}'.format(3,n,(3*n)))
+print('{} x {} = {}'.format(4,n,(4*n)))
+print('{} x {} = {}'.format(5,n,(5*n)))
+print('{} x {} = {}'.format(6,n,(6*n)))
+print('{} x {} = {}'.format(7,n,(7*n)))
+print('{} x {} = {}'.format(8,n,(8*n)))
+print('{} x {} = {}'.format(9,n,(9*n)))
+print('_'*12)
+
+-------------------------------------------
+
+#ex10 Crie um programa que converta o real na carteira em dólar
+
+real = float(input('Digite o valor em Real: '))
+dolar = real / 5.69
+print('Com R${:.2f} você pode comprar US${:.2f}'.format(real,dolar))
+
+-------------------------------------------

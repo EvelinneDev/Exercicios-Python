@@ -1,0 +1,123 @@
+#ex21 Faça um programa em Python que abra e reproduza o áudio de um arquivo mp3
+
+import pygame
+pygame.init()
+pygame.mixer.music.load('nomedamusica.mp3')
+pygame.mixer.music.play()
+pygame.event.wait()
+
+teste = bool(input("digite algo"))
+
+-------------------------------------------------
+
+#ex022 Crie um programa que leia o nome completo de uma pessoa e mostre:
+-o nome com todas as letras maiúsculas
+-com todas minúsculas
+-quantas letras ao todo sem considerar os espaços
+-quantas letras tem o primeiro nome
+
+nome = str(input('Digite seu nome completo:')).strip()
+print('Analisando seu nome...')
+print('Seu nome em maiúsculas é:{}'.format(nome.upper()))
+print('Seu nome em minúsculas é:{}'.format(nome.lower()))
+print('Seu nome tem ao todo {} letras'.format(len(nome)-nome.count(' ')))
+separa = nome.split()
+print('Seu primeiro nome tem {} letras.'.format(nome.find(' ')))
+print('Seu primeiro nome é {} e ele tem {} letras.'.format(separa[0], len(separa[0])))
+
+-------------------------------------------------
+
+#ex023 Faça um programa que leia de 0 a 9999 e mostre na tela cada um dos dígitos separados.
+
+num = int(input('Escolha um número de 0 a 9999: '))
+u = num // 1 % 10
+d = num // 10 % 10
+c = num // 100 % 10
+m = num // 1000 % 10
+
+print('Analisando o número {}'.format(num))
+print('Unidade: {}'.format(u))
+print('Dezena: {}'.format(d))
+print('Centena: {}'.format(c))
+print('Milhar: {}'.format(m))
+
+-------------------------------------------------
+
+#ex024 crie um programa que leia o nome de uma cidade e diga se ela começa ou não como nome "SANTO"
+
+cidade = str(input('Qual a sua cidade? ')).strip()
+print(cidade[:5].upper() == 'SANTO')
+
+-------------------------------------------------
+
+#ex025 Crie um programa que leia o nome de uma pessoa e diga se ela tem "SILVA" no nome.
+
+nome = str(input('Seu nome completo:')).strip()
+print('Seu nome tem "Silva"?{}'.format('silva' in nome.lower()))
+
+-------------------------------------------------
+
+#ex026 Faça um programa que leia uma frase pelo teclado e mostre:
+-quantas vezes aparece a letra "A"
+-em q posição ela aparece a primeira vez
+-em q posição ela aparece a ultima vez
+
+frase = str(input('Digite uma frase:')).upper().strip()
+print('A letra "A" aparece {} vezes na frase'.format(frase.upper().count('A')))
+print('A letra "A" aparece pela primeira vez na posição {}.'.format(frase.find('A')+1))
+print('A última letra "A" aparece na posição {}'. format(frase.rfind('A')+1))
+
+
+-------------------------------------------------
+
+#ex027 Faça um programa que leia o nome completo de uma pessoa, mostrando em seguida o primeiro e o ultimo nome separadamente.
+
+n = str(input('Seu nome completo:')).strip()
+nome = n.split()
+print('Seu nome completo é: {}'.format(n))
+print('Seu primeiro nome: {}'.format(nome[0]))
+print('Seu ultimo sobrenome é {}.'.format(nome[len(nome)-1]))
+
+-------------------------------------------------
+
+#ex28
+# Escreva um desafio que faça o compuador "pensar" em um número inteiro entre 0 e 5 e peça para o usuário tentar descobrir qual foi o número escolhido pelo computador
+O programa deverá escrever na tela se o usuário venceu ou perdeu.
+
+from random import randint
+from time import sleep
+computador = randint(0, 5)
+print('-===-'*10)
+print('Vou pensar em um número de 0 a 5. Tente adivinhar...')
+print('-===-'*10)
+jogador = int(input('Qual a sua aposta?'))
+print('Processando...')
+sleep(2)
+if computador == jogador:
+    print('Você Acertou')
+else:
+    print('Você errou! Eu pensei no número {} e você {}'.format(computador,jogador))
+
+-------------------------------------------------
+
+#ex29 Escreva um programa que leia a velocidade de um carro
+-Se ele ultrapassar 80km/h, mostre uma mensagem dizendo que ele foi multado.
+-A multa vai custar R$7,00 por cada Km acima do limite.
+
+velocidade = int(input('A velocidade do carro está em km:'))
+multa = (velocidade-80)*7
+if velocidade > 80:
+    print('Você está está a {}km/h, por isso será multado em R${:.2f}'.format(velocidade,multa))
+else:
+    print('Parabéns, você é um bom motorista!')
+
+-------------------------------------------------
+
+#ex30 Crie um programa que leia um número inteiro qualquer e mostre na tela se é par ou ímpar
+
+from random import randint
+computador = int(randint(0,2000))
+if computador % 2 == 00:
+    print('O computador leu o número {} e ele é par'.format(computador))
+else:
+    print('O computador leu o número {}, ele é impar'.format(computador))

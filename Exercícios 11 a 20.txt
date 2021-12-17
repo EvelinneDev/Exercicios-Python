@@ -1,0 +1,97 @@
+#ex11 Faça um programa que leia a largura e a altura de uma parede em metros, calcule a sua área e a quantidade de tinta necessária para pintá-la, sabendo
+que cada litro de tinta pinta uma área de 2m²
+
+altura = float(input('Qual a altura da parede? '))
+largura = float(input('Digite a largura da parede: '))
+area = altura * largura
+tinta = 2
+print('A parede possui {:.2f}m² como área, para pintar serão necessárias {:.1f} latas de tinta'.format(area,(area/2)))
+
+-------------------------------------------------
+
+#ex12 Faça um algoritmo que leia o preço de um produto e mostre seu novo preço, com 5% de desconto.
+
+p = float(input('Preço do produto:R$ '))
+print('O valor do produto com desconto é: R${:.2f}'.format(p*0.95))
+
+
+-------------------------------------------------
+
+#ex13 Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
+
+salario = float(input('Salário do funcionário: R$ '))
+print('O salário do fucionário é R${:.2f}, com o aumento ficou R${:.2f}'.format(salario,(salario*1.15)))
+
+
+-------------------------------------------------
+
+#ex14 Conversor de temperaturas
+
+c = int(input('Digite a temperatura em Celsius:'))
+print('A temperatura convertida em Kelvin é {}K e em Fahrenheit {}ºF'.format((c+273),((1.8*c)+32)))
+
+-------------------------------------------------
+
+#ex15 Aluguel de carros. Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado e a quantidade de dias pelos quais foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por km rodado.
+
+km = float(input('Km percorridos:'))
+dias = int(input('Dias alugados:'))
+print('Você utilizou o carro por {} dias e percorreu {}km. O aluguel do carro custou R${:.2f}'.format(dias,km,((60*dias)+(0.15*km))))
+
+
+-------------------------------------------------
+
+#ex16 Crie um programa que leia um número Real qualquer pelo teclado e mostre na tela a sua porção inteira
+
+from math import trunc
+num = float(input('Digite um valor:'))
+print('O valor digitado é {}, seu valor inteiro é {}'.format(num,trunc(num)))
+
+-------------------------------------------------
+
+#ex17 faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triangulo retangulo, calcule e mostre o comprimento da hipotenusa.
+
+import math
+co = float(input('Comprimento do cateto oposto:'))
+ca = float(input('Comprimento do cateto adjacente'))
+hi = math.hypot(co, ca)
+print('O comprimento da hipotenusa é {:.2f}'.format(hi))
+
+-------------------------------------------------
+
+#ex18 Faça um programa que leia um angulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse angulo.
+
+import math
+an = float(input('Digite um ângulo qualquer:'))
+r = math.radians(an)
+s = math.sin(r)
+c = math.cos(r)
+t = math.tan(r)
+print(' O âgulo {} possui o seno {:.2f}, o cosseno {:.2f} e a tangente {:.2f}'.format(an,s,c,t))
+
+-------------------------------------------------
+
+#ex19 Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido
+
+from random import choice
+a1 = str(input('Aluna 1:'))
+a2 = str(input('Aluna 2:'))
+a3 = str(input('Aluna 3:'))
+a4 = str(input('Aluna 4:'))
+lista = [a1,a2,a3,a4]
+escolhido = choice(lista)
+print('O aluno escolhido foi {}'.format(escolhido))
+
+-------------------------------------------------
+
+#ex20 O prof quer sortear a ordem de apresentação. Faça um programa que leia o nome dos 4 alunos e mostre a ordem sorteada.
+
+import random
+a1 = str(input('Aluna 1:'))
+a2 = str(input('Aluna 2:'))
+a3 = str(input('Aluna 3:'))
+a4 = str(input('Aluna 4:'))
+lista = [a1,a2,a3,a4]
+random.shuffle(lista)
+print('A ordem de apresentação será: ')
+print(lista)
